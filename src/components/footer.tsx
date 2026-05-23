@@ -1,5 +1,6 @@
 // src/components/footer.tsx
 import Link from "next/link";
+import Image from "next/image";
 import { COMPANY } from "@/lib/content";
 
 export function Footer() {
@@ -8,12 +9,7 @@ export function Footer() {
       <div className="container-wide py-14">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2.5 font-semibold text-slate-900">
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-amber-500 to-amber-600 text-sm font-extrabold text-slate-900">
-                Fx
-              </span>
-              <span>SkuFx</span>
-            </div>
+            <Image src="/logo.png" alt="SkuFx" width={120} height={32} className="h-8 w-auto" />
             <p className="mt-3 max-w-md text-[14px] leading-relaxed text-slate-600">
               The Amazon Operator&apos;s Platform — from keyword research to ERP, for brand owners who build at scale.
             </p>
