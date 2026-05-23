@@ -7,11 +7,53 @@ import { COMPANY } from "@/lib/content";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-cream-50 pt-12 pb-20 lg:pt-20 lg:pb-28">
-      <div className="container-wide">
+      {/* Soft drifting blob mesh behind hero — subtle amber/cream tones */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div
+          className="blob"
+          style={{
+            top: "-200px",
+            left: "-120px",
+            width: "560px",
+            height: "560px",
+            background: "#fcd34d",
+            opacity: 0.18,
+            animation: "float-blob 16s ease-in-out infinite",
+          }}
+        />
+        <div
+          className="blob"
+          style={{
+            top: "10%",
+            right: "-180px",
+            width: "640px",
+            height: "640px",
+            background: "#fb923c",
+            opacity: 0.12,
+            animation: "float-blob 22s ease-in-out infinite reverse",
+            animationDelay: "-4s",
+          }}
+        />
+        <div
+          className="blob"
+          style={{
+            top: "55%",
+            left: "30%",
+            width: "480px",
+            height: "480px",
+            background: "#fde68a",
+            opacity: 0.22,
+            animation: "float-blob 19s ease-in-out infinite",
+            animationDelay: "-8s",
+          }}
+        />
+      </div>
+
+      <div className="container-wide relative">
         {/* eyebrow pill */}
         <div className="flex justify-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white py-1 pl-1 pr-3.5 text-[12px] font-semibold text-slate-600 shadow-sm">
-            <span className="rounded-full bg-amber-500 px-2 py-0.5 text-[11px] font-extrabold text-slate-900">NEW</span>
+            <span className="animate-pulse-soft rounded-full bg-amber-500 px-2 py-0.5 text-[11px] font-extrabold text-slate-900">NEW</span>
             SP-API Integration Coming
           </div>
         </div>
@@ -30,13 +72,13 @@ export function Hero() {
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row" id="request-access">
           <Link
             href="#early-access-form"
-            className="inline-flex h-12 items-center justify-center rounded-lg bg-slate-900 px-7 text-[15px] font-semibold text-white shadow-sm hover:bg-slate-800 transition-colors"
+            className="inline-flex h-12 items-center justify-center rounded-lg bg-slate-900 px-7 text-[15px] font-semibold text-white shadow-sm transition-all hover:bg-slate-800 hover:shadow-lg hover:shadow-slate-900/20 hover:-translate-y-0.5"
           >
             Request Early Access
           </Link>
           <Link
             href="/features"
-            className="group inline-flex h-12 items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-white px-6 text-[15px] font-semibold text-slate-900 hover:border-slate-300 transition-colors"
+            className="group inline-flex h-12 items-center justify-center gap-1.5 rounded-lg border border-slate-200 bg-white px-6 text-[15px] font-semibold text-slate-900 transition-colors hover:border-amber-400"
           >
             See the Platform
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -52,7 +94,7 @@ export function Hero() {
 
         {/* hero mockup */}
         <div className="mx-auto mt-14 max-w-5xl">
-          <div className="relative rounded-xl border border-slate-200 bg-white p-1.5 shadow-2xl shadow-amber-500/5">
+          <div className="animate-mockup-float relative rounded-xl border border-slate-200 bg-white p-1.5 shadow-2xl shadow-amber-500/10">
             <Image
               src="/mockups/dashboard-overview.png"
               width={1440}
@@ -70,7 +112,13 @@ export function Hero() {
 
 function BentoCell({ num, label, accent = false }: { num: string; label: string; accent?: boolean }) {
   return (
-    <div className={`rounded-xl border p-4 text-left ${accent ? "border-amber-300 bg-amber-100" : "border-slate-200 bg-white"}`}>
+    <div
+      className={`rounded-xl border p-4 text-left transition-all duration-300 hover:-translate-y-0.5 ${
+        accent
+          ? "border-amber-300 bg-amber-100 hover:shadow-lg hover:shadow-amber-500/20"
+          : "border-slate-200 bg-white hover:border-amber-200 hover:shadow-md hover:shadow-amber-500/10"
+      }`}
+    >
       <span className="block font-mono text-[26px] font-extrabold leading-none text-slate-900">{num}</span>
       <span className="mt-1.5 block text-[12px] font-medium text-slate-600">{label}</span>
     </div>

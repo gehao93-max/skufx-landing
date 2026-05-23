@@ -140,9 +140,88 @@
 }
 
 @utility gradient-text {
-  background-image: linear-gradient(90deg, #f59e0b 0%, #ea580c 100%);
+  background-image: linear-gradient(90deg, #f59e0b 0%, #ea580c 50%, #d97706 100%);
+  background-size: 200% 200%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+  animation: gradient-shimmer 6s ease-in-out infinite;
+}
+
+/* ====================================================================
+   Sci-fi accents — light, subtle additions on top of Bento Light
+   ==================================================================== */
+
+@keyframes gradient-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float-blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 25px) scale(0.95); }
+}
+
+@keyframes mockup-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.45); }
+  50% { box-shadow: 0 0 0 8px rgba(245, 158, 11, 0); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.15); }
+}
+
+@keyframes glow-rim {
+  0%, 100% { box-shadow: 0 0 30px -8px rgba(245, 158, 11, 0.18); }
+  50% { box-shadow: 0 0 40px -8px rgba(245, 158, 11, 0.35); }
+}
+
+@keyframes scroll-fade-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Drift-pulse blobs behind hero — three offset for a soft mesh feel */
+@utility blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Subtle floating animation for hero mockup */
+@utility animate-mockup-float {
+  animation: mockup-float 7s ease-in-out infinite;
+}
+
+/* Pulse dot for NEW / Live indicators */
+@utility animate-pulse-soft {
+  animation: pulse-soft 2.4s ease-in-out infinite;
+}
+
+@utility animate-pulse-dot {
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+/* Subtle dot grid background — for use on dark sections */
+@utility dot-grid {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+/* Light dot grid for cream backgrounds */
+@utility dot-grid-light {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.04) 1px, transparent 0);
+  background-size: 22px 22px;
 }

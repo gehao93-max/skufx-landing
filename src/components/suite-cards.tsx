@@ -26,10 +26,12 @@ export function SuiteCards() {
           {SUITES.map((suite) => (
             <div
               key={suite.id}
-              className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-7 transition-shadow hover:shadow-xl hover:shadow-amber-500/5"
+              className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-amber-300 hover:shadow-2xl hover:shadow-amber-500/15"
             >
-              <div className="flex items-start justify-between gap-3">
-                <div className="grid h-12 w-12 place-items-center rounded-xl bg-amber-100 text-amber-700">
+              {/* Soft amber rim glow on hover */}
+              <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" style={{ background: "radial-gradient(circle at top, rgba(245,158,11,0.08), transparent 60%)" }} aria-hidden="true" />
+              <div className="relative flex items-start justify-between gap-3">
+                <div className="grid h-12 w-12 place-items-center rounded-xl bg-amber-100 text-amber-700 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
                   <suite.icon className="h-6 w-6" />
                 </div>
                 <span className={`rounded-full border px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide ${BADGE_STYLE[suite.badgeColor]}`}>
@@ -37,13 +39,13 @@ export function SuiteCards() {
                 </span>
               </div>
 
-              <h3 className="mt-5 text-[22px] font-bold text-slate-900">{suite.name}</h3>
-              <p className="mt-1.5 text-[14px] font-medium text-slate-500">{suite.tagline}</p>
-              <p className="mt-4 flex-1 text-[14px] leading-[1.65] text-slate-600">{suite.description}</p>
+              <h3 className="relative mt-5 text-[22px] font-bold text-slate-900">{suite.name}</h3>
+              <p className="relative mt-1.5 text-[14px] font-medium text-slate-500">{suite.tagline}</p>
+              <p className="relative mt-4 flex-1 text-[14px] leading-[1.65] text-slate-600">{suite.description}</p>
 
               <Link
                 href={`/features#${suite.id}`}
-                className="mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold text-slate-900 group-hover:text-amber-700 transition-colors"
+                className="relative mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold text-slate-900 group-hover:text-amber-700 transition-colors"
               >
                 Learn more
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />

@@ -21,17 +21,17 @@ export function RoadmapTimeline() {
             return (
               <div
                 key={phase.quarter}
-                className={`relative rounded-2xl border p-6 ${
+                className={`relative rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-0.5 ${
                   isNow
-                    ? "border-amber-300 bg-amber-50"
-                    : "border-slate-200 bg-cream-50"
+                    ? "border-amber-300 bg-amber-50 shadow-lg shadow-amber-500/10 hover:shadow-xl hover:shadow-amber-500/25"
+                    : "border-slate-200 bg-cream-50 hover:border-slate-300 hover:shadow-md"
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[13px] font-bold text-slate-900">{phase.quarter}</span>
                   <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${
                     isNow
-                      ? "bg-amber-500 text-slate-900"
+                      ? "animate-pulse-soft bg-amber-500 text-slate-900"
                       : "bg-slate-200 text-slate-700"
                   }`}>
                     {isNow ? <Check className="h-3 w-3" /> : <Clock className="h-3 w-3" />}
