@@ -2,6 +2,8 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+@plugin "@tailwindcss/typography";
+
 /* === Bento Light · 静态站, 无 dark mode === */
 /* shadcn token → Tailwind utility (沿用 shadcn 默认 mapping) */
 @theme inline {
