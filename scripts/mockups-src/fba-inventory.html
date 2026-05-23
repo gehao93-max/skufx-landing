@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FBA Inventory Center · SkuFx</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  body { width: 1280px; height: 800px; }
+  /* Coming badge ribbon */
+  .coming-ribbon {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    z-index: 5;
+    background: linear-gradient(135deg, var(--amber-500), var(--amber-600));
+    color: var(--slate-900);
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 4px 14px rgba(245,158,11,0.3);
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">Fx</span><span>SkuFx</span></div>
+    <div class="brand-sub">NovaBrand · Workspace</div>
+
+    <div class="nav-section">Intelligence</div>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Keyword Research</a>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>New Product Pipeline</a>
+
+    <div class="nav-section">Brand Operations</div>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Listing Protection</a>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>Price & BSR Monitor</a>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Seller Monitoring</a>
+
+    <div class="nav-section">ERP Core · 2026 →</div>
+    <a class="nav-item active"><svg class="icon" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>FBA Inventory</a>
+    <a class="nav-item coming"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Order Management <span class="pill coming-pill">Q4</span></a>
+    <a class="nav-item coming"><svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Profit Dashboard <span class="pill coming-pill">Q1·27</span></a>
+  </aside>
+
+  <main class="main" style="position:relative;">
+    <span class="coming-ribbon">⚡ Coming Q3 2026 · Early Preview</span>
+
+    <div class="topbar">
+      <span class="crumb"><a>NovaBrand</a> &nbsp;/&nbsp; <b>FBA Inventory Center</b></span>
+      <div class="topbar-right">
+        <span class="badge slate square">FBA Inventory API + FBA Inbound Eligibility</span>
+        <button class="icon-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg></button>
+        <div class="user-pill"><span class="avatar">JD</span>John D.</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="page-head">
+        <div>
+          <h2>FBA Inventory Center</h2>
+          <p>42 SKUs across 3 fulfillment centers · last sync 4 min ago · SP-API <span class="badge slate square mono">FBA Inventory</span></p>
+        </div>
+        <div class="flex gap-2">
+          <button class="btn outline">
+            <svg class="icon" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+            Sync now
+          </button>
+          <button class="btn outline">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/></svg>
+            Export plan
+          </button>
+          <button class="btn amber">
+            <svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Create restock shipment
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 KPI -->
+      <div class="grid g4 mb-4">
+        <div class="stat">
+          <div class="stat-label">Total SKUs</div>
+          <div class="stat-value tabular">42</div>
+          <div class="stat-foot">3,847 units available</div>
+        </div>
+        <div class="stat" style="border-color:var(--red-200);background:var(--red-50);">
+          <div class="stat-label" style="color:var(--red-700);">Stockout risk</div>
+          <div class="stat-value text-red-700 tabular">4 SKUs</div>
+          <div class="stat-foot">DoS &lt; 14 days</div>
+        </div>
+        <div class="stat" style="border-color:var(--amber-200);background:var(--amber-50);">
+          <div class="stat-label" style="color:var(--amber-800);">Need restock</div>
+          <div class="stat-value text-amber-800 tabular">11 SKUs</div>
+          <div class="stat-foot">DoS 14-30 days</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Overstock</div>
+          <div class="stat-value tabular">3 SKUs</div>
+          <div class="stat-foot">DoS &gt; 180 days</div>
+        </div>
+      </div>
+
+      <div class="grid g-3-2">
+        <!-- SKU table -->
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div style="padding:12px 16px;border-bottom:1px solid var(--slate-200);display:flex;justify-content:space-between;align-items:center;">
+            <h3>SKU Health</h3>
+            <div class="flex gap-2">
+              <button class="btn outline xs">All brands ▾</button>
+              <button class="btn outline xs">Sort: DoS ↑</button>
+            </div>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>SKU / ASIN</th>
+                <th class="right">Available</th>
+                <th class="right">Inbound</th>
+                <th class="right">DoS</th>
+                <th>90d velocity</th>
+                <th class="right">Restock</th>
+                <th class="center">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="b">ProVital Mg-400</div>
+                  <div class="text-xs mono text-slate-500">B0B5M6N7P8 · PV-MG-180</div>
+                </td>
+                <td class="right mono b text-red-700">34</td>
+                <td class="right mono">0</td>
+                <td class="right mono text-red-700 b">9d</td>
+                <td>
+                  <div class="text-xs mono">3.8/day</div>
+                  <div class="progress" style="width:60px;margin-top:2px;"><div class="progress-bar red" style="width:15%"></div></div>
+                </td>
+                <td class="right mono b">300</td>
+                <td class="center"><span class="badge red">Critical</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="b">PureLife Omega</div>
+                  <div class="text-xs mono text-slate-500">B0C9Q0R1S2 · PL-OM-120</div>
+                </td>
+                <td class="right mono b text-red-700">8</td>
+                <td class="right mono text-emerald-700">450</td>
+                <td class="right mono text-red-700 b">2d</td>
+                <td>
+                  <div class="text-xs mono">4.1/day</div>
+                  <div class="progress" style="width:60px;margin-top:2px;"><div class="progress-bar red" style="width:5%"></div></div>
+                </td>
+                <td class="right mono">— in transit</td>
+                <td class="center"><span class="badge red">Critical</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="b">NovaBrand D3 5000</div>
+                  <div class="text-xs mono text-slate-500">B0A1X2Y3Z4 · NB-D3-360</div>
+                </td>
+                <td class="right mono b">87</td>
+                <td class="right mono">0</td>
+                <td class="right mono text-amber-800 b">23d</td>
+                <td>
+                  <div class="text-xs mono">3.8/day</div>
+                  <div class="progress" style="width:60px;margin-top:2px;"><div class="progress-bar amber" style="width:38%"></div></div>
+                </td>
+                <td class="right mono b">200</td>
+                <td class="center"><span class="badge amber">Restock</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="b">NovaBrand B12</div>
+                  <div class="text-xs mono text-slate-500">B0D4E5F6G7 · NB-B12-60</div>
+                </td>
+                <td class="right mono b">42</td>
+                <td class="right mono">120</td>
+                <td class="right mono text-amber-800 b">19d</td>
+                <td>
+                  <div class="text-xs mono">2.2/day</div>
+                  <div class="progress" style="width:60px;margin-top:2px;"><div class="progress-bar amber" style="width:32%"></div></div>
+                </td>
+                <td class="right mono b">100</td>
+                <td class="center"><span class="badge amber">Restock</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="b">ProVital Collagen</div>
+                  <div class="text-xs mono text-slate-500">B0E2F3G4H5 · PV-CO-16</div>
+                </td>
+                <td class="right mono b">156</td>
+                <td class="right mono">0</td>
+                <td class="right mono text-emerald-700 b">61d</td>
+                <td>
+                  <div class="text-xs mono">2.5/day</div>
+                  <div class="progress" style="width:60px;margin-top:2px;"><div class="progress-bar emerald" style="width:78%"></div></div>
+                </td>
+                <td class="right mono text-slate-500">—</td>
+                <td class="center"><span class="badge emerald">Healthy</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="b">PureLife K2 + D3</div>
+                  <div class="text-xs mono text-slate-500">B0F6G7H8I9 · PL-KD-90</div>
+                </td>
+                <td class="right mono b">218</td>
+                <td class="right mono">0</td>
+                <td class="right mono text-emerald-700 b">87d</td>
+                <td>
+                  <div class="text-xs mono">2.5/day</div>
+                  <div class="progress" style="width:60px;margin-top:2px;"><div class="progress-bar emerald" style="width:85%"></div></div>
+                </td>
+                <td class="right mono text-slate-500">—</td>
+                <td class="center"><span class="badge emerald">Healthy</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="b">NovaBrand Probiotic</div>
+                  <div class="text-xs mono text-slate-500">B0G8H9I0J1 · NB-PR-30</div>
+                </td>
+                <td class="right mono b">421</td>
+                <td class="right mono">0</td>
+                <td class="right mono text-slate-500 b">213d</td>
+                <td>
+                  <div class="text-xs mono">2.0/day</div>
+                  <div class="progress" style="width:60px;margin-top:2px;"><div class="progress-bar sky" style="width:100%"></div></div>
+                </td>
+                <td class="right mono text-slate-500">— hold</td>
+                <td class="center"><span class="badge slate">Overstock</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Right side: restock calculator + shipment schedule -->
+        <div class="col gap-3">
+          <div class="card" style="background:linear-gradient(135deg,#fff,var(--amber-50));border-color:var(--amber-200);">
+            <div class="card-h">
+              <div>
+                <h3>Restock Recommendation</h3>
+                <p>For ProVital Mg-400 (selected)</p>
+              </div>
+            </div>
+            <div class="col gap-2" style="font-size:12px;">
+              <div class="flex justify-between">
+                <span class="text-slate-500">Current available</span>
+                <span class="b mono">34 units</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Sales velocity (90d)</span>
+                <span class="b mono">3.8 / day</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Lead time</span>
+                <span class="b mono">28 days</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Safety stock</span>
+                <span class="b mono">+ 14 days</span>
+              </div>
+              <div style="border-top:1px solid var(--amber-200);padding-top:8px;margin-top:4px;" class="flex justify-between">
+                <span class="b text-slate-900">Recommended order</span>
+                <span class="text-xl font-extrabold text-amber-800 tabular">300</span>
+              </div>
+              <div class="text-xs text-slate-500">→ 78 days of supply after arrival</div>
+            </div>
+            <button class="btn amber sm mt-4" style="width:100%;">Add to next shipment →</button>
+          </div>
+
+          <div class="card">
+            <div class="card-h">
+              <div>
+                <h3>Inbound Shipments</h3>
+                <p>Next 30 days</p>
+              </div>
+            </div>
+            <div class="col gap-2 text-xs">
+              <div style="padding:8px 10px;background:var(--cream-50);border-radius:6px;border:1px solid var(--slate-200);">
+                <div class="flex justify-between">
+                  <span class="b text-slate-900">FBA15TXNQ45</span>
+                  <span class="badge sky">In transit</span>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">PureLife Omega · 450 units → FTW1 · ETA 3 days</div>
+              </div>
+              <div style="padding:8px 10px;background:var(--cream-50);border-radius:6px;border:1px solid var(--slate-200);">
+                <div class="flex justify-between">
+                  <span class="b text-slate-900">FBA15TXNR82</span>
+                  <span class="badge slate">Working</span>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">NovaBrand B12 · 120 units → BFI4 · ship by May 28</div>
+              </div>
+              <div style="padding:8px 10px;background:var(--cream-50);border-radius:6px;border:1px solid var(--slate-200);">
+                <div class="flex justify-between">
+                  <span class="b text-slate-900">Draft · auto</span>
+                  <span class="badge amber">Pending review</span>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">3 SKUs · 700 units → ONT8 · created from your alerts</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>

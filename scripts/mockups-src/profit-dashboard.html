@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Profit Dashboard · SkuFx</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  body { width: 1280px; height: 800px; }
+  .coming-ribbon {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    z-index: 5;
+    background: linear-gradient(135deg, var(--amber-500), var(--amber-600));
+    color: var(--slate-900);
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 4px 14px rgba(245,158,11,0.3);
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">Fx</span><span>SkuFx</span></div>
+    <div class="brand-sub">NovaBrand · Workspace</div>
+
+    <div class="nav-section">Intelligence</div>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Keyword Research</a>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>New Product Pipeline</a>
+
+    <div class="nav-section">Brand Operations</div>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Listing Protection</a>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>Price & BSR Monitor</a>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Seller Monitoring</a>
+
+    <div class="nav-section">ERP Core · 2026 →</div>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>FBA Inventory</a>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Order Management</a>
+    <a class="nav-item active"><svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Profit Dashboard</a>
+  </aside>
+
+  <main class="main" style="position:relative;">
+    <span class="coming-ribbon">⚡ Coming Q1 2027 · Early Preview</span>
+
+    <div class="topbar">
+      <span class="crumb"><a>NovaBrand</a> &nbsp;/&nbsp; <b>Finance & Profit Dashboard</b></span>
+      <div class="topbar-right">
+        <span class="badge slate square">SP-API Finances · daily settlement</span>
+        <button class="icon-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg></button>
+        <div class="user-pill"><span class="avatar">JD</span>John D.</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="page-head">
+        <div>
+          <h2>Finance & Profit Dashboard</h2>
+          <p>SKU-level true profit · settlement-grade data · May 1 - 23, 2026</p>
+        </div>
+        <div class="flex gap-2">
+          <button class="btn outline">All brands ▾</button>
+          <button class="btn outline">MTD ▾</button>
+          <button class="btn outline">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/></svg>
+            Export
+          </button>
+        </div>
+      </div>
+
+      <!-- 5 KPI -->
+      <div class="grid g5 mb-4">
+        <div class="stat accent">
+          <div class="stat-label">Net Profit (MTD)</div>
+          <div class="stat-value tabular">$46,189</div>
+          <div class="stat-delta up">▲ 24.3% vs Apr</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Gross Revenue</div>
+          <div class="stat-value tabular">$132,450</div>
+          <div class="stat-delta up">▲ 18.4%</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Avg Margin</div>
+          <div class="stat-value text-emerald-700 tabular">34.9%</div>
+          <div class="stat-delta up">▲ 2.1pp</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Refund Rate</div>
+          <div class="stat-value tabular">1.8%</div>
+          <div class="stat-delta down">▼ 0.3pp (good)</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Ad Spend Ratio</div>
+          <div class="stat-value tabular">12.4%</div>
+          <div class="stat-foot">Industry median: 15%</div>
+        </div>
+      </div>
+
+      <div class="grid g-3-2">
+        <!-- SKU profit table -->
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div style="padding:12px 16px;border-bottom:1px solid var(--slate-200);display:flex;justify-content:space-between;align-items:center;">
+            <h3>Profit by SKU</h3>
+            <div class="flex gap-2">
+              <button class="btn outline xs">All categories ▾</button>
+              <button class="btn outline xs">Sort: Margin ↓</button>
+            </div>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>SKU</th>
+                <th class="right">Revenue</th>
+                <th class="right">FBA</th>
+                <th class="right">Commission</th>
+                <th class="right">COGS</th>
+                <th class="right">Ads</th>
+                <th class="right">Net</th>
+                <th class="right">Margin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="b">NovaBrand D3 5000</div>
+                  <div class="text-xs mono text-slate-500">NB-D3-360 · 524 units</div>
+                </td>
+                <td class="right mono">$15,191</td>
+                <td class="right mono text-red-600">−$2,525</td>
+                <td class="right mono text-red-600">−$2,279</td>
+                <td class="right mono text-red-600">−$3,406</td>
+                <td class="right mono text-red-600">−$1,677</td>
+                <td class="right mono b text-emerald-700">$5,304</td>
+                <td class="right">
+                  <span class="badge emerald" style="font-size:11px;">34.9%</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="b">ProVital Mg-400</div>
+                  <div class="text-xs mono text-slate-500">PV-MG-180 · 382 units</div>
+                </td>
+                <td class="right mono">$9,359</td>
+                <td class="right mono text-red-600">−$1,604</td>
+                <td class="right mono text-red-600">−$1,404</td>
+                <td class="right mono text-red-600">−$2,177</td>
+                <td class="right mono text-red-600">−$987</td>
+                <td class="right mono b text-emerald-700">$3,187</td>
+                <td class="right">
+                  <span class="badge emerald" style="font-size:11px;">34.1%</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="b">PureLife Omega</div>
+                  <div class="text-xs mono text-slate-500">PL-OM-120 · 297 units</div>
+                </td>
+                <td class="right mono">$9,800</td>
+                <td class="right mono text-red-600">−$1,723</td>
+                <td class="right mono text-red-600">−$1,470</td>
+                <td class="right mono text-red-600">−$2,148</td>
+                <td class="right mono text-red-600">−$1,098</td>
+                <td class="right mono b text-emerald-700">$3,361</td>
+                <td class="right">
+                  <span class="badge emerald" style="font-size:11px;">34.3%</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="b">NovaBrand B12</div>
+                  <div class="text-xs mono text-slate-500">NB-B12-60 · 198 units</div>
+                </td>
+                <td class="right mono">$3,762</td>
+                <td class="right mono text-red-600">−$721</td>
+                <td class="right mono text-red-600">−$564</td>
+                <td class="right mono text-red-600">−$891</td>
+                <td class="right mono text-red-600">−$428</td>
+                <td class="right mono b text-emerald-700">$1,158</td>
+                <td class="right">
+                  <span class="badge emerald" style="font-size:11px;">30.8%</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="b">PureLife K2 + D3</div>
+                  <div class="text-xs mono text-slate-500">PL-KD-90 · 174 units</div>
+                </td>
+                <td class="right mono">$5,028</td>
+                <td class="right mono text-red-600">−$894</td>
+                <td class="right mono text-red-600">−$754</td>
+                <td class="right mono text-red-600">−$1,140</td>
+                <td class="right mono text-red-600">−$612</td>
+                <td class="right mono b text-emerald-700">$1,628</td>
+                <td class="right">
+                  <span class="badge emerald" style="font-size:11px;">32.4%</span>
+                </td>
+              </tr>
+              <tr style="background:var(--amber-50);">
+                <td>
+                  <div class="b">ProVital Collagen</div>
+                  <div class="text-xs mono text-slate-500">PV-CO-16 · 89 units</div>
+                </td>
+                <td class="right mono">$2,584</td>
+                <td class="right mono text-red-600">−$534</td>
+                <td class="right mono text-red-600">−$388</td>
+                <td class="right mono text-red-600">−$1,084</td>
+                <td class="right mono text-red-600">−$432</td>
+                <td class="right mono b text-amber-800">$146</td>
+                <td class="right">
+                  <span class="badge amber" style="font-size:11px;">5.6% ↓</span>
+                </td>
+              </tr>
+              <tr style="background:var(--red-50);">
+                <td>
+                  <div class="b">NovaBrand Probiotic</div>
+                  <div class="text-xs mono text-slate-500">NB-PR-30 · 41 units</div>
+                </td>
+                <td class="right mono">$1,189</td>
+                <td class="right mono text-red-600">−$287</td>
+                <td class="right mono text-red-600">−$178</td>
+                <td class="right mono text-red-600">−$615</td>
+                <td class="right mono text-red-600">−$208</td>
+                <td class="right mono b text-red-700">−$99</td>
+                <td class="right">
+                  <span class="badge red" style="font-size:11px;">−8.3%</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Right side: pie chart + insights -->
+        <div class="col gap-3">
+          <div class="card">
+            <div class="card-h">
+              <div>
+                <h3>Cost Breakdown</h3>
+                <p>Where each $100 goes</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-center">
+              <!-- Pie -->
+              <svg width="140" height="140" viewBox="0 0 42 42">
+                <circle cx="21" cy="21" r="15.915" fill="#fff" stroke="#fdf2e1" stroke-width="6"/>
+                <!-- segments: Net 35, FBA 17, Commission 15, COGS 22, Ads 11 -->
+                <!-- start at 12 o'clock, stroke-dashoffset trick -->
+                <circle cx="21" cy="21" r="15.915" fill="none" stroke="#10b981" stroke-width="6"
+                        stroke-dasharray="35 65" stroke-dashoffset="25" transform="rotate(-90 21 21)"/>
+                <circle cx="21" cy="21" r="15.915" fill="none" stroke="#f59e0b" stroke-width="6"
+                        stroke-dasharray="17 83" stroke-dashoffset="-10" transform="rotate(-90 21 21)"/>
+                <circle cx="21" cy="21" r="15.915" fill="none" stroke="#ef4444" stroke-width="6"
+                        stroke-dasharray="15 85" stroke-dashoffset="-27" transform="rotate(-90 21 21)"/>
+                <circle cx="21" cy="21" r="15.915" fill="none" stroke="#8b5cf6" stroke-width="6"
+                        stroke-dasharray="22 78" stroke-dashoffset="-42" transform="rotate(-90 21 21)"/>
+                <circle cx="21" cy="21" r="15.915" fill="none" stroke="#0ea5e9" stroke-width="6"
+                        stroke-dasharray="11 89" stroke-dashoffset="-64" transform="rotate(-90 21 21)"/>
+                <text x="21" y="20" text-anchor="middle" font-size="5" font-weight="700" fill="#0f172a">$132,450</text>
+                <text x="21" y="25" text-anchor="middle" font-size="3" fill="#64748b">total revenue</text>
+              </svg>
+              <div class="col gap-1 flex-1">
+                <div class="legend-item">
+                  <span class="swatch" style="background:#10b981;"></span>
+                  Net profit
+                  <span class="val">$46,189 (34.9%)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="swatch" style="background:#8b5cf6;"></span>
+                  COGS
+                  <span class="val">$29,139 (22.0%)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="swatch" style="background:#f59e0b;"></span>
+                  FBA fees
+                  <span class="val">$22,517 (17.0%)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="swatch" style="background:#ef4444;"></span>
+                  Amazon commission
+                  <span class="val">$19,868 (15.0%)</span>
+                </div>
+                <div class="legend-item">
+                  <span class="swatch" style="background:#0ea5e9;"></span>
+                  PPC ad spend
+                  <span class="val">$14,737 (11.1%)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="background:linear-gradient(135deg,#fff,var(--amber-50));border-color:var(--amber-200);">
+            <div class="card-h">
+              <div>
+                <h3>💡 Profit Insights</h3>
+                <p>AI-flagged opportunities</p>
+              </div>
+            </div>
+            <div class="col gap-2" style="font-size:11.5px;line-height:1.6;color:var(--slate-700);">
+              <div class="flex gap-2">
+                <span style="color:var(--red-600);font-weight:700;font-size:13px;line-height:1;margin-top:1px;">!</span>
+                <span><b class="text-slate-900">NB-PR-30 losing money:</b> COGS too high vs price. Re-source supplier or kill SKU.</span>
+              </div>
+              <div class="flex gap-2">
+                <span style="color:var(--amber-600);font-weight:700;font-size:13px;line-height:1;margin-top:1px;">!</span>
+                <span><b class="text-slate-900">Ad ratio on PV-CO-16 is 17%:</b> 5pp above brand avg. Pause low-ROAS campaigns.</span>
+              </div>
+              <div class="flex gap-2">
+                <span style="color:var(--emerald-600);font-weight:700;font-size:13px;line-height:1;margin-top:1px;">✓</span>
+                <span><b class="text-slate-900">Top 3 SKUs deliver 87% of profit.</b> Consider doubling inventory bet.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

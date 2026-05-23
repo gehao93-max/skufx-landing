@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Seller Monitoring · SkuFx</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  body { width: 1280px; height: 800px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">Fx</span><span>SkuFx</span></div>
+    <div class="brand-sub">NovaBrand · Workspace</div>
+
+    <div class="nav-section">Intelligence</div>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Keyword Research</a>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>New Product Pipeline</a>
+
+    <div class="nav-section">Brand Operations</div>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Listing Protection</a>
+    <a class="nav-item"><svg class="icon" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>Price & BSR Monitor</a>
+    <a class="nav-item active"><svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Seller Monitoring <span class="pill">3</span></a>
+
+    <div class="nav-section">ERP Core · 2026 →</div>
+    <a class="nav-item coming"><svg class="icon" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>FBA Inventory <span class="pill coming-pill">Q3</span></a>
+    <a class="nav-item coming"><svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Profit Dashboard <span class="pill coming-pill">Q1·27</span></a>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <span class="crumb"><a>NovaBrand</a> &nbsp;/&nbsp; <a>Seller Monitoring</a> &nbsp;/&nbsp; <b>Pure Encapsulations Direct</b></span>
+      <div class="topbar-right">
+        <span class="badge emerald square" style="font-size:11px;">● Live · scanned 2h ago</span>
+        <button class="icon-btn"><svg class="icon" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg></button>
+        <div class="user-pill"><span class="avatar">JD</span>John D.</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="page-head">
+        <div>
+          <h2>Seller Monitoring</h2>
+          <p>12 sellers tracked · daily ASIN diff scan · new product alerts to your inbox</p>
+        </div>
+        <div class="flex gap-2">
+          <button class="btn outline">
+            <svg class="icon" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            Email digest settings
+          </button>
+          <button class="btn primary">
+            <svg class="icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Track new seller
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 KPI -->
+      <div class="grid g4 mb-4">
+        <div class="stat">
+          <div class="stat-label">Tracking</div>
+          <div class="stat-value tabular">12 <span style="font-size:13px;color:var(--slate-400);">sellers</span></div>
+          <div class="stat-foot">3 new this week</div>
+        </div>
+        <div class="stat accent">
+          <div class="stat-label">New ASINs (7d)</div>
+          <div class="stat-value tabular">38</div>
+          <div class="stat-delta up">▲ 14 vs last week</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Total SKUs watched</div>
+          <div class="stat-value tabular">1,847</div>
+          <div class="stat-foot">avg 154 per seller</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Pushed to projects</div>
+          <div class="stat-value tabular">7</div>
+          <div class="stat-foot">competitor candidates this week</div>
+        </div>
+      </div>
+
+      <div class="grid g-1-2">
+        <!-- Seller list -->
+        <div class="card" style="padding:0;overflow:hidden;">
+          <div style="padding:12px 14px;border-bottom:1px solid var(--slate-200);">
+            <div class="flex justify-between items-center">
+              <h3>Tracked Sellers</h3>
+              <span class="text-xs text-slate-500">12 · sorted by activity</span>
+            </div>
+          </div>
+          <div class="col">
+            <!-- Selected seller -->
+            <div style="padding:12px 14px;border-left:3px solid var(--rose-500);background:var(--rose-50);">
+              <div class="flex justify-between">
+                <div class="b text-slate-900 text-sm">Pure Encapsulations Direct</div>
+                <span class="badge amber square">+5</span>
+              </div>
+              <div class="text-xs mono text-slate-500 mt-1">A2X9YZ1234567 · 247 SKUs</div>
+              <div class="text-xs text-slate-500 mt-1">★ 4.7 · 12,847 ratings</div>
+            </div>
+            <div style="padding:12px 14px;border-top:1px solid var(--slate-100);">
+              <div class="flex justify-between">
+                <div class="b text-slate-900 text-sm">Thorne Research</div>
+                <span class="badge amber square">+3</span>
+              </div>
+              <div class="text-xs mono text-slate-500 mt-1">A3B7XY9876543 · 189 SKUs</div>
+              <div class="text-xs text-slate-500 mt-1">★ 4.8 · 8,234 ratings</div>
+            </div>
+            <div style="padding:12px 14px;border-top:1px solid var(--slate-100);">
+              <div class="flex justify-between">
+                <div class="b text-slate-900 text-sm">Now Foods</div>
+                <span class="badge amber square">+2</span>
+              </div>
+              <div class="text-xs mono text-slate-500 mt-1">A4C5DE1122334 · 412 SKUs</div>
+              <div class="text-xs text-slate-500 mt-1">★ 4.6 · 24,153 ratings</div>
+            </div>
+            <div style="padding:12px 14px;border-top:1px solid var(--slate-100);">
+              <div class="flex justify-between">
+                <div class="b text-slate-900 text-sm">Garden of Life</div>
+                <span class="text-xs text-slate-400">—</span>
+              </div>
+              <div class="text-xs mono text-slate-500 mt-1">A5D6EF2233445 · 178 SKUs</div>
+              <div class="text-xs text-slate-500 mt-1">★ 4.5 · 9,210 ratings</div>
+            </div>
+            <div style="padding:12px 14px;border-top:1px solid var(--slate-100);">
+              <div class="flex justify-between">
+                <div class="b text-slate-900 text-sm">Sports Research</div>
+                <span class="badge amber square">+1</span>
+              </div>
+              <div class="text-xs mono text-slate-500 mt-1">A6E7FG3344556 · 96 SKUs</div>
+              <div class="text-xs text-slate-500 mt-1">★ 4.8 · 18,471 ratings</div>
+            </div>
+            <div style="padding:12px 14px;border-top:1px solid var(--slate-100);">
+              <div class="flex justify-between">
+                <div class="b text-slate-900 text-sm">VitalProteins</div>
+                <span class="text-xs text-slate-400">—</span>
+              </div>
+              <div class="text-xs mono text-slate-500 mt-1">A7F8GH4455667 · 142 SKUs</div>
+              <div class="text-xs text-slate-500 mt-1">★ 4.4 · 31,892 ratings</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seller detail -->
+        <div class="col gap-3">
+          <!-- Profile card -->
+          <div class="card">
+            <div class="flex items-start gap-3">
+              <div class="asin-thumb" style="width:54px;height:54px;font-size:24px;background:linear-gradient(135deg,var(--rose-500),var(--rose-600));color:#fff;">PE</div>
+              <div class="flex-1">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h3 style="font-size:16px;">Pure Encapsulations Direct</h3>
+                    <div class="text-xs text-slate-500 mt-1">
+                      <span class="badge slate square mono">A2X9YZ1234567</span>
+                      <span style="margin-left:6px;">Storefront · joined 2017 · 8.6 years</span>
+                    </div>
+                  </div>
+                  <div class="flex gap-2">
+                    <button class="btn outline sm">Push 5 to project</button>
+                    <button class="btn amber sm">Extract keywords</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid g4 mt-4">
+              <div>
+                <div class="text-xs text-slate-500">Total ratings</div>
+                <div class="b text-slate-900" style="font-size:16px;">12,847</div>
+                <div class="text-xs text-emerald-700">★ 4.7 avg</div>
+              </div>
+              <div>
+                <div class="text-xs text-slate-500">Active SKUs</div>
+                <div class="b text-slate-900" style="font-size:16px;">247</div>
+                <div class="text-xs text-slate-500">+12 (30d)</div>
+              </div>
+              <div>
+                <div class="text-xs text-slate-500">FBA fulfilled</div>
+                <div class="b text-slate-900" style="font-size:16px;">93%</div>
+                <div class="text-xs text-slate-500">Prime eligible</div>
+              </div>
+              <div>
+                <div class="text-xs text-slate-500">Country</div>
+                <div class="b text-slate-900" style="font-size:16px;">🇺🇸 USA</div>
+                <div class="text-xs text-slate-500">tax: NY</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- New ASIN events -->
+          <div class="card" style="padding:0;overflow:hidden;">
+            <div style="padding:12px 14px;border-bottom:1px solid var(--slate-200);display:flex;justify-content:space-between;align-items:center;">
+              <h3>New ASINs detected · last 30 days</h3>
+              <div class="flex gap-2">
+                <button class="btn outline xs">All types ▾</button>
+                <button class="btn outline xs">Push to SERP</button>
+              </div>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th style="width:30px;"><input type="checkbox"></th>
+                  <th>ASIN / Title</th>
+                  <th class="right">Price</th>
+                  <th class="right">BSR</th>
+                  <th class="center">Status</th>
+                  <th>Detected</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox" checked></td>
+                  <td>
+                    <div class="flex gap-2 items-center">
+                      <div class="asin-thumb" style="width:28px;height:28px;font-size:14px;">💊</div>
+                      <div>
+                        <div class="b">Magnesium Glycinate 400mg, 180 Caps</div>
+                        <div class="text-xs mono text-slate-500">B0M1G2L3Y4 · variant of B0M1G2L0XY</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="right mono">$28.99</td>
+                  <td class="right mono">#4,127</td>
+                  <td class="center"><span class="badge sky">Variant</span></td>
+                  <td class="text-xs text-slate-500">2d ago</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" checked></td>
+                  <td>
+                    <div class="flex gap-2 items-center">
+                      <div class="asin-thumb" style="width:28px;height:28px;font-size:14px;">☀️</div>
+                      <div>
+                        <div class="b">Vitamin D3 5000 IU with K2</div>
+                        <div class="text-xs mono text-slate-500">B0VK3D5K2M · new product</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="right mono">$19.50</td>
+                  <td class="right mono">#12,841</td>
+                  <td class="center"><span class="badge emerald">New</span></td>
+                  <td class="text-xs text-slate-500">2d ago</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" checked></td>
+                  <td>
+                    <div class="flex gap-2 items-center">
+                      <div class="asin-thumb" style="width:28px;height:28px;font-size:14px;">🌿</div>
+                      <div>
+                        <div class="b">Curcumin Phytosome 500mg, 120 Caps</div>
+                        <div class="text-xs mono text-slate-500">B0CR5N5L4P · new product</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="right mono">$54.00</td>
+                  <td class="right mono">#8,392</td>
+                  <td class="center"><span class="badge emerald">New</span></td>
+                  <td class="text-xs text-slate-500">3d ago</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <div class="flex gap-2 items-center">
+                      <div class="asin-thumb" style="width:28px;height:28px;font-size:14px;">🐟</div>
+                      <div>
+                        <div class="b">Omega-3 Fish Oil 1000mg, 240 Softgels</div>
+                        <div class="text-xs mono text-slate-500">B0OM1FF240G · new product</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="right mono">$32.00</td>
+                  <td class="right mono">#5,217</td>
+                  <td class="center"><span class="badge emerald">New</span></td>
+                  <td class="text-xs text-slate-500">5d ago</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <div class="flex gap-2 items-center">
+                      <div class="asin-thumb" style="width:28px;height:28px;font-size:14px;">💚</div>
+                      <div>
+                        <div class="b">Probiotic 50 Billion, 60 Caps</div>
+                        <div class="text-xs mono text-slate-500">B0PR50B60C · variant</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="right mono">$36.50</td>
+                  <td class="right mono">#9,148</td>
+                  <td class="center"><span class="badge sky">Variant</span></td>
+                  <td class="text-xs text-slate-500">6d ago</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
