@@ -182,10 +182,13 @@ export const ROADMAP_PHASES = [
 ];
 
 export const SP_API_ROLES = [
-  { name: "FBA Inventory", purpose: "stock levels, days-of-supply, alerts" },
-  { name: "Orders", purpose: "daily count, revenue, regional breakdown" },
-  { name: "Sales Reports", purpose: "traffic, conversion, BSR trends" },
-  { name: "Finances", purpose: "fees, settlement, true per-SKU profit" },
+  { name: "Catalog & Listings", purpose: "Product info, listing publishing, A+ content" },
+  { name: "Pricing", purpose: "Competitive price monitoring & auto-pricing" },
+  { name: "FBA Inventory", purpose: "Stock levels, days-of-supply, inbound planning" },
+  { name: "Orders & Inventory", purpose: "Order tracking & sales analytics" },
+  { name: "Sales Analytics", purpose: "Business performance dashboard" },
+  { name: "Finances", purpose: "P&L calculation & settlement reconciliation" },
+  { name: "Brand Analytics", purpose: "Keyword research & market insights" },
 ];
 
 export const COMPANY = {

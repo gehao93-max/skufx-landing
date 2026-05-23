@@ -14,7 +14,7 @@ export function SpApiIntegration() {
               Powered by Amazon Selling Partner API
             </h2>
             <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-slate-300">
-              SkuFx&apos;s ERP modules connect directly to your Seller Central. Once you authorize, we pull:
+              SkuFx integrates directly with Amazon SP-API. With your authorized account, we access:
             </p>
           </div>
 
