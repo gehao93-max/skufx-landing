@@ -14,7 +14,7 @@ export function SpApiIntegration() {
               Powered by Amazon Selling Partner API
             </h2>
             <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-slate-300">
-              SkuFx integrates directly with Amazon SP-API. With your authorized account, we access:
+              SkuFx&apos;s ERP modules connect directly to your Seller Central. Once you authorize, we pull:
             </p>
           </div>
 
@@ -32,9 +32,17 @@ export function SpApiIntegration() {
             ))}
           </ul>
 
-          <p className="mt-8 border-t border-slate-700 pt-6 text-[13px] leading-relaxed text-slate-400">
-            Your data stays yours. Revoke access anytime from Seller Central.
-          </p>
+          <div className="mt-8 flex flex-col gap-4 border-t border-slate-700 pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-[13px] leading-relaxed text-slate-400">
+              Your data is encrypted, isolated, and deletable on demand. Revoke access anytime from Seller Central.
+            </p>
+            <a
+              href="/connect"
+              className="inline-flex flex-shrink-0 items-center gap-1.5 rounded-lg bg-amber-500 px-4 py-2.5 text-[13px] font-semibold text-slate-900 transition-colors hover:bg-amber-400"
+            >
+              Connect Your Amazon Account →
+            </a>
+          </div>
         </div>
       </div>
     </section>

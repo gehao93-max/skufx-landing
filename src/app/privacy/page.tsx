@@ -18,7 +18,7 @@ export default function Privacy() {
         <article className="prose prose-slate container-narrow py-20 max-w-none lg:py-28">
           <h1 className="text-section-h1 text-slate-900">Privacy Policy</h1>
           <p className="text-[13px] text-slate-500">
-            Version 1.0 &bull; Effective date: May 23, 2026 &bull; Last updated: May 23, 2026
+            Version 2.0 &bull; Effective date: May 23, 2026 &bull; Last updated: May 23, 2026
           </p>
 
           {/* 1 */}
@@ -26,7 +26,7 @@ export default function Privacy() {
           <p>
             SkuFx (&quot;SkuFx&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is operated by{" "}
             <strong>{COMPANY.name}</strong> (the &quot;Company&quot;), a company incorporated in
-            Liaoning, People&apos;s Republic of China. We are the data controller for personal
+            Liaoyang, Liaoning Province, People&apos;s Republic of China. We are the data controller for personal
             information processed under this Policy.
           </p>
           <p>
@@ -54,40 +54,41 @@ export default function Privacy() {
             </li>
           </ul>
 
-          <h3>2.2 Information Collected via Amazon SP-API</h3>
+          <h3>2.2 Amazon Seller Data (via SP-API)</h3>
           <p>
             If you authorize SkuFx to connect to your Amazon Seller Central account via Login with
-            Amazon (LWA) OAuth, we retrieve and process the following data categories based on the
-            SP-API roles you grant:
+            Amazon (LWA) OAuth, we retrieve and process the following data to provide Business ERP
+            features:
           </p>
           <ul>
             <li>
-              <strong>Catalog data</strong> (ASIN, title, attributes, category) — Catalog Items role.
+              <strong>FBA inventory data:</strong> available units, reserved, inbound, and
+              damaged units per SKU.
             </li>
             <li>
-              <strong>Brand Analytics reports</strong> (search frequency rank, click share,
-              conversion share) — Brand Analytics role.
+              <strong>Order data:</strong> Order ID, status, amount, fulfillment channel, marketplace,
+              purchase date. Order data may include ship-to city, state, and postal code — treated as
+              PII: stored in separately encrypted fields, automatically deleted 30 days after order
+              delivery, never displayed at individual order level, used only for aggregated regional
+              analytics.
             </li>
             <li>
-              <strong>Pricing data</strong> (current prices, competitive prices) — Pricing role.
+              <strong>Sales &amp; traffic reports:</strong> sessions, conversion rate, units sold,
+              revenue by date and ASIN.
             </li>
             <li>
-              <strong>Inventory data</strong> (FBA quantity, disposition, age) — FBA Inventory role
-              (if granted).
+              <strong>Financial events:</strong> FBA fees, platform commissions, refunds, promotional
+              discounts, adjustments.
             </li>
             <li>
-              <strong>Order data</strong> (order ID, status, shipment detail, buyer
-              state/country for tax purposes) — Orders &amp; Reports role (if granted).
-            </li>
-            <li>
-              <strong>Financial data</strong> (settlements, fees, refunds) — Finances role (if
-              granted).
-            </li>
-            <li>
-              <strong>Notification events</strong> (listing status changes) — Notifications role (if
-              granted).
+              <strong>Settlement records:</strong> disbursement amounts and timing.
             </li>
           </ul>
+          <p>
+            <strong>We do NOT request and do NOT access:</strong> buyer names, emails, or street
+            addresses; Direct-to-Consumer Shipping data; Buyer Communications or Solicitation data;
+            Tax Invoice or Tax Remittance data.
+          </p>
           <p>
             <strong>
               We use SP-API data solely to provide SkuFx features to you.
@@ -170,7 +171,33 @@ export default function Privacy() {
           </ul>
 
           {/* 5 */}
-          <h2>5. Data Sharing and Disclosure</h2>
+          <h2>5. Multi-Tenant Data Isolation</h2>
+          <p>
+            SkuFx processes data for many independent sellers as a public solution provider. We
+            guarantee:
+          </p>
+          <ul>
+            <li>
+              <strong>Database isolation:</strong> PostgreSQL Row-Level Security ensures queries are
+              always scoped to a single seller. No cross-account data access is technically possible,
+              even for SkuFx engineers.
+            </li>
+            <li>
+              <strong>No cross-seller analytics:</strong> we do not aggregate or benchmark data
+              across seller accounts.
+            </li>
+            <li>
+              <strong>Engineering access:</strong> all production data access by SkuFx staff is
+              audit-logged and requires documented justification.
+            </li>
+            <li>
+              <strong>No competitive use:</strong> we never use your Amazon data for our own retail
+              operations or to benefit other customers.
+            </li>
+          </ul>
+
+          {/* 6 */}
+          <h2>6. Data Sharing and Disclosure</h2>
           <p>
             <strong>
               We do not share your SP-API data or personal information with any third party for
@@ -181,10 +208,9 @@ export default function Privacy() {
           <ul>
             <li>
               <strong>Sub-processors:</strong> we engage service providers who process data on our
-              behalf under contractual data processing obligations. Current sub-processors: Vercel
-              (web hosting), RackNerd (application hosting), Cloudflare (DNS/WAF), Sentry (error
-              tracking), and Google Workspace (email). Full details are available in our{" "}
-              <a href="/dpa">Data Processing Agreement</a>.
+              behalf under contractual data processing obligations. See the complete, current list at{" "}
+              <a href="/sub-processors">skufx.com/sub-processors</a>. We notify active customers at
+              least 30 days before adding any new sub-processor that handles Amazon seller data.
             </li>
             <li>
               <strong>Legal requirements:</strong> we may disclose information when required by law,
@@ -198,24 +224,33 @@ export default function Privacy() {
             </li>
           </ul>
 
-          {/* 6 */}
-          <h2>6. Data Retention</h2>
+          {/* 7 */}
+          <h2>7. Data Retention</h2>
           <p>We retain different categories of data for different periods:</p>
           <ul>
             <li>
-              <strong>SP-API Catalog &amp; Pricing data:</strong> up to 90 days from last access.
+              <strong>FBA inventory snapshots:</strong> 1 year (days-of-supply trend analysis).
             </li>
             <li>
-              <strong>Brand Analytics report documents:</strong> 30 days from the report date.
+              <strong>Orders (with PII fields):</strong>{" "}
+              <strong>buyer location (city/state/postal code) deleted 30 days after order delivery</strong>,
+              in compliance with Amazon&apos;s Developer Protection Policy (DPP).
             </li>
             <li>
-              <strong>Order data (if applicable):</strong>{" "}
-              <strong>deleted within 30 days of order delivery</strong>, in compliance with
-              Amazon&apos;s Developer Protection Policy (DPP).
+              <strong>Order aggregates (no PII):</strong> 2 years (sales analytics).
             </li>
             <li>
-              <strong>LWA authentication tokens:</strong> retained until you revoke SP-API
-              authorization, then deleted within 24 hours.
+              <strong>Sales &amp; traffic reports:</strong> 2 years (trend analysis).
+            </li>
+            <li>
+              <strong>Financial events:</strong> 1 year (profit calculation).
+            </li>
+            <li>
+              <strong>Settlement records:</strong> 7 years (tax compliance).
+            </li>
+            <li>
+              <strong>LWA refresh tokens:</strong> retained until you revoke SP-API authorization,
+              then deleted within 24 hours (stored encrypted with Fernet).
             </li>
             <li>
               <strong>Application logs:</strong> 1 year.
@@ -237,8 +272,8 @@ export default function Privacy() {
             send you a confirmation email.
           </p>
 
-          {/* 7 */}
-          <h2>7. Your Rights and Choices</h2>
+          {/* 8 */}
+          <h2>8. Your Rights and Choices</h2>
           <p>
             Depending on your jurisdiction, you may have the following rights regarding your personal
             data:
@@ -283,8 +318,8 @@ export default function Privacy() {
             authority.
           </p>
 
-          {/* 8 */}
-          <h2>8. International Data Transfers</h2>
+          {/* 9 */}
+          <h2>9. International Data Transfers</h2>
           <p>
             {COMPANY.name} is incorporated in the People&apos;s Republic of China. Your data is
             processed and stored on servers in the United States. When we transfer personal data from
@@ -302,8 +337,8 @@ export default function Privacy() {
             <a href={`mailto:${COMPANY.emails.privacy}`}>{COMPANY.emails.privacy}</a>.
           </p>
 
-          {/* 9 */}
-          <h2>9. Cookies and Tracking</h2>
+          {/* 10 */}
+          <h2>10. Cookies and Tracking</h2>
           <p>We use the following cookies on skufx.com and app.skufx.com:</p>
           <ul>
             <li>
@@ -322,8 +357,8 @@ export default function Privacy() {
             <a href="/cookies">Cookie Policy</a> for details.
           </p>
 
-          {/* 10 */}
-          <h2>10. Children&apos;s Privacy</h2>
+          {/* 11 */}
+          <h2>11. Children&apos;s Privacy</h2>
           <p>
             SkuFx is intended solely for business use by individuals 18 years of age or older. We do
             not knowingly collect personal information from children under 13. If you believe a child
@@ -332,8 +367,8 @@ export default function Privacy() {
             delete it promptly.
           </p>
 
-          {/* 11 */}
-          <h2>11. Changes to This Policy</h2>
+          {/* 12 */}
+          <h2>12. Changes to This Policy</h2>
           <p>
             We may update this Policy from time to time. When we make material changes, we will
             update the &quot;Last updated&quot; date at the top of this page and notify active users
@@ -341,14 +376,16 @@ export default function Privacy() {
             Policy are available on request.
           </p>
 
-          {/* 12 */}
-          <h2>12. Contact Us</h2>
+          {/* 13 */}
+          <h2>13. Contact Us</h2>
           <p>
             <strong>Data Controller &amp; Data Protection Officer:</strong>
             <br />
             {COMPANY.name}
             <br />
-            Liaoning, People&apos;s Republic of China
+            Room 1002, 1st Floor, Building D, No. 36-4 Tianfu Road,
+            Wensheng District, Liaoyang City, Liaoning Province,
+            People&apos;s Republic of China
             <br />
             <a href={`mailto:${COMPANY.emails.privacy}`}>{COMPANY.emails.privacy}</a>
           </p>

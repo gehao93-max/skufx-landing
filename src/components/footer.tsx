@@ -22,6 +22,7 @@ export function Footer() {
             <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Product</p>
             <ul className="mt-3 space-y-2 text-[14px] text-slate-700">
               <li><Link href="/features" className="hover:text-amber-700">Features</Link></li>
+              <li><Link href="/connect" className="hover:text-amber-700">Connect</Link></li>
               <li><Link href="/security" className="hover:text-amber-700">Security</Link></li>
               <li><Link href="https://app.skufx.com" className="hover:text-amber-700">Sign in</Link></li>
               <li><Link href="/#request-access" className="hover:text-amber-700">Request Access</Link></li>
@@ -43,6 +44,7 @@ export function Footer() {
               <li><Link href="/terms" className="hover:text-amber-700">Terms of Service</Link></li>
               <li><Link href="/cookies" className="hover:text-amber-700">Cookie Policy</Link></li>
               <li><Link href="/dpa" className="hover:text-amber-700">DPA</Link></li>
+              <li><Link href="/sub-processors" className="hover:text-amber-700">Sub-processors</Link></li>
             </ul>
           </div>
         </div>

@@ -2,7 +2,7 @@
 import type { MetadataRoute } from "next";
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://skufx.com";
-const ROUTES = ["", "/features", "/about", "/contact", "/security", "/privacy", "/terms", "/cookies", "/dpa"];
+const ROUTES = ["", "/features", "/about", "/contact", "/security", "/privacy", "/terms", "/cookies", "/dpa", "/connect", "/sub-processors"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

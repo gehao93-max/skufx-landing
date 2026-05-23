@@ -54,6 +54,61 @@ export default function Security() {
               If you discover a security vulnerability, please email <a href="mailto:security@skufx.com" className="font-mono font-semibold text-amber-700 hover:underline">security@skufx.com</a> with details. We acknowledge within 24 hours and aim to remediate critical issues within 7 days.
             </p>
           </section>
+
+          <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-8">
+            <h2 className="text-[22px] font-bold text-slate-900">Authentication controls</h2>
+            <ul className="mt-3 space-y-2 text-[14px] leading-relaxed text-slate-600">
+              <li><span className="font-medium text-slate-800">Password minimum:</span> 12 characters — uppercase, lowercase, digit, and special character required</li>
+              <li><span className="font-medium text-slate-800">Rotation:</span> 365-day mandatory rotation; last 10 passwords cannot be reused</li>
+              <li><span className="font-medium text-slate-800">Lockout:</span> account locked after 10 failed login attempts</li>
+              <li><span className="font-medium text-slate-800">MFA:</span> TOTP enforced for all internal accounts</li>
+              <li><span className="font-medium text-slate-800">Session:</span> HTTP-only Secure cookie, 30-day rolling expiry</li>
+            </ul>
+          </section>
+
+          <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-8">
+            <h2 className="text-[22px] font-bold text-slate-900">Vulnerability response SLA</h2>
+            <div className="mt-3 space-y-2 text-[14px] text-slate-600">
+              <div className="flex items-baseline justify-between border-b border-slate-100 pb-2">
+                <span><span className="font-medium text-slate-800">Critical</span> (CVSS 9.0+)</span>
+                <span className="font-semibold text-amber-700">Resolved within 7 days</span>
+              </div>
+              <div className="flex items-baseline justify-between border-b border-slate-100 pb-2">
+                <span><span className="font-medium text-slate-800">High</span> (CVSS 7.0–8.9)</span>
+                <span>Resolved within 30 days</span>
+              </div>
+              <div className="flex items-baseline justify-between">
+                <span><span className="font-medium text-slate-800">Medium</span> (CVSS 4.0–6.9)</span>
+                <span>Resolved within 90 days</span>
+              </div>
+            </div>
+            <p className="mt-4 text-[13px] text-slate-500">
+              Scanning: GitHub Dependabot + Trivy container scanning on every build.
+            </p>
+          </section>
+
+          <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-8">
+            <h2 className="text-[22px] font-bold text-slate-900">Multi-tenant data isolation</h2>
+            <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
+              As a public solution provider serving multiple independent sellers, we enforce strict isolation:
+            </p>
+            <ul className="mt-3 space-y-2 text-[14px] leading-relaxed text-slate-600">
+              <li>PostgreSQL Row-Level Security on all seller data tables</li>
+              <li>Every query is scoped to a single <code className="rounded bg-slate-100 px-1 py-0.5 text-[13px]">seller_account_id</code></li>
+              <li>No cross-tenant data access is technically possible, even for SkuFx engineers</li>
+              <li>All engineering access to production data is audit-logged and requires documented justification</li>
+            </ul>
+          </section>
+
+          <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-8">
+            <h2 className="text-[22px] font-bold text-slate-900">Sub-processors</h2>
+            <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
+              See <a href="/sub-processors" className="font-semibold text-amber-700 hover:underline">skufx.com/sub-processors</a> for the complete, current list of third-party services we use to operate the platform.
+            </p>
+            <p className="mt-2 text-[14px] leading-relaxed text-slate-600">
+              We notify active customers at least 30 days before adding any new sub-processor that processes Amazon seller data.
+            </p>
+          </section>
         </div>
       </main>
       <Footer />

@@ -188,7 +188,9 @@ export default function Terms() {
           <p>
             <strong>{COMPANY.name}</strong>
             <br />
-            Liaoning, People&apos;s Republic of China
+            Room 1002, 1st Floor, Building D, No. 36-4 Tianfu Road,
+            Wensheng District, Liaoyang City, Liaoning Province,
+            People&apos;s Republic of China
             <br />
             General: <a href={`mailto:${COMPANY.emails.support}`}>{COMPANY.emails.support}</a>
             <br />

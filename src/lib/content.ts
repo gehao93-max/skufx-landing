@@ -32,12 +32,12 @@ export interface Suite {
 export const SUITES: Suite[] = [
   {
     id: "intelligence",
-    name: "Intelligence Suite",
-    tagline: "Know what to build, know what to chase.",
+    name: "Product Studio",
+    tagline: "From idea to launch-ready listing.",
     badge: "Available Now",
     badgeColor: "amber",
-    icon: Search,
-    description: "Keyword research, product pipeline, and competitor analysis — powered by Amazon Brand Analytics and SP-API Catalog data.",
+    icon: Sparkles,
+    description: "AI-assisted product development: market research, formula generation, listing copy, hero images, A+ content. Built for our own Amazon brands — now yours.",
     features: [
       {
         name: "Keyword Opportunity Analyzer",
@@ -67,12 +67,12 @@ export const SUITES: Suite[] = [
   },
   {
     id: "operations",
-    name: "Brand Operations",
-    tagline: "Defend your listings, optimize in real time.",
+    name: "Market Intelligence",
+    tagline: "Know the market. Protect your brand.",
     badge: "Available Now",
     badgeColor: "amber",
-    icon: Shield,
-    description: "Listing protection, price monitoring, and AI-assisted publishing — real-time brand defense via SP-API Notifications and Pricing.",
+    icon: Search,
+    description: "Keyword research, competitor tracking, listing protection. Shared market data. No Amazon authorization required.",
     features: [
       {
         name: "Real-time Listing Protection",
@@ -103,12 +103,12 @@ export const SUITES: Suite[] = [
   },
   {
     id: "erp",
-    name: "ERP Core",
-    tagline: "FBA, orders, and finance — one source of truth.",
-    badge: "Coming in 2026",
+    name: "Business ERP",
+    tagline: "Your private store data, fully synced.",
+    badge: "Connecting via SP-API",
     badgeColor: "slate",
     icon: Box,
-    description: "FBA inventory, order management, and profit dashboards. The full operational stack for serious Amazon brands.",
+    description: "Sales analytics, FBA inventory, orders, profit dashboard. Your private store data, synced directly from Amazon Seller Central via SP-API.",
     features: [
       {
         name: "FBA Inventory Center",
@@ -146,20 +146,19 @@ export const ROADMAP_PHASES = [
     quarter: "Now",
     label: "Available",
     items: [
-      "Keyword Opportunity Analyzer",
-      "New Product Pipeline",
-      "Real-time Listing Protection",
-      "Price & BSR Monitor",
-      "Competitor ASIN Intelligence",
+      "Product Studio (New Product Dev)",
+      "Hero Image & Mockup",
+      "Keyword Research & Competitors",
+      "Listing Protection",
     ],
   },
   {
     quarter: "Q3 2026",
     label: "In Development",
     items: [
-      "AI-Assisted Listing Publisher",
+      "ERP Dashboard (FBA + Orders)",
       "FBA Inventory Center",
-      "Performance Reports",
+      "AI Listing Publisher",
     ],
   },
   {
@@ -167,8 +166,8 @@ export const ROADMAP_PHASES = [
     label: "Planned",
     items: [
       "Order Management Center",
+      "Sales Performance Reports",
       "Restock Planner",
-      "Sales Reporting",
     ],
   },
   {
@@ -176,24 +175,21 @@ export const ROADMAP_PHASES = [
     label: "Planned",
     items: [
       "Finance & Profit Dashboard",
+      "Settlement Reconciliation",
       "Multi-store ERP",
-      "Partner API",
     ],
   },
 ];
 
 export const SP_API_ROLES = [
-  { name: "Brand Analytics", purpose: "Keyword & market insights" },
-  { name: "Catalog & Listings", purpose: "Product management" },
-  { name: "Pricing", purpose: "Real-time competitive intelligence" },
-  { name: "Notifications", purpose: "Instant listing event alerts" },
-  { name: "FBA Inventory", purpose: "Stock visibility & planning" },
-  { name: "Orders & Reports", purpose: "Sales pipeline" },
-  { name: "Finances", purpose: "Complete P&L visibility" },
+  { name: "FBA Inventory", purpose: "stock levels, days-of-supply, alerts" },
+  { name: "Orders", purpose: "daily count, revenue, regional breakdown" },
+  { name: "Sales Reports", purpose: "traffic, conversion, BSR trends" },
+  { name: "Finances", purpose: "fees, settlement, true per-SKU profit" },
 ];
 
 export const COMPANY = {
-  name: "Liaoning Jingcai Trading Co., Ltd.",
+  name: "Liaoyang Puwei Trading Co., Ltd.",
   yearsOnAmazon: "6+",
   modules: 10,
   abaKeywords: "350k+",
@@ -201,5 +197,6 @@ export const COMPANY = {
     support: "support@skufx.com",
     privacy: "privacy@skufx.com",
     security: "security@skufx.com",
+    dpa: "dpa@skufx.com",
   },
 };

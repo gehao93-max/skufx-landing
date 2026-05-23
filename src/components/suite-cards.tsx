@@ -16,9 +16,9 @@ export function SuiteCards() {
       <div className="container-wide">
         <div className="mx-auto max-w-2xl text-center">
           <SectionEyebrow label="The Platform" />
-          <h2 className="mt-3 text-section-h1 text-slate-900">Three suites. One operating system.</h2>
+          <h2 className="mt-3 text-section-h1 text-slate-900">Three layers. One operating system.</h2>
           <p className="mt-4 text-body-lg text-slate-600">
-            SkuFx replaces five separate tools with one platform that grows from product research to full ERP.
+            From AI-assisted product development to market intelligence to full ERP — a single platform for Amazon brand operators.
           </p>
         </div>
 

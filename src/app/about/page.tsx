@@ -35,7 +35,11 @@ export default function About() {
             <h3 className="mt-12 text-card-h3">Company</h3>
             <p className="text-[14px]">
               {COMPANY.name}<br/>
-              Established 2020 · Amazon US seller
+              Room 1002, 1st Floor, Building D, No. 36-4 Tianfu Road,<br/>
+              Wensheng District, Liaoyang City, Liaoning Province,<br/>
+              People&apos;s Republic of China<br/>
+              Established 2020 · Amazon US seller<br/>
+              Business License No.: 91211003MAEPU5QJ3B
             </p>
           </div>
         </article>
