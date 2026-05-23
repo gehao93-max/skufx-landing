@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-cream-100">
       <div className="container-wide py-14">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5 font-semibold text-slate-900">
               <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-amber-500 to-amber-600 text-sm font-extrabold text-slate-900">
@@ -37,8 +37,16 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-[14px] text-slate-700">
               <li><Link href="/about" className="hover:text-amber-700">About</Link></li>
               <li><Link href="/contact" className="hover:text-amber-700">Contact</Link></li>
-              <li><Link href="/privacy" className="hover:text-amber-700">Privacy</Link></li>
-              <li><Link href="/terms" className="hover:text-amber-700">Terms</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500">Legal</p>
+            <ul className="mt-3 space-y-2 text-[14px] text-slate-700">
+              <li><Link href="/privacy" className="hover:text-amber-700">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-amber-700">Terms of Service</Link></li>
+              <li><Link href="/cookies" className="hover:text-amber-700">Cookie Policy</Link></li>
+              <li><Link href="/dpa" className="hover:text-amber-700">DPA</Link></li>
             </ul>
           </div>
         </div>
