@@ -3,6 +3,36 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "SkuFx",
+      "url": "https://skufx.com",
+      "logo": "https://skufx.com/logo.svg",
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "SkuFx",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description":
+        "The Amazon Operator's Platform — keyword research, brand monitoring, inventory, orders, and finance for Amazon brand owners.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Brand Analytics keyword opportunity analyzer",
+        "AI-powered new product pipeline",
+        "Real-time listing protection (ANY_OFFER_CHANGED)",
+        "Price & BSR monitoring",
+        "FBA inventory tracking",
+        "Order management",
+        "Finance & profit dashboard",
+      ],
+    },
+  ],
+};
+
 export const metadata: Metadata = {
   title: {
     default: "SkuFx — The Amazon Operator's Platform",
@@ -25,6 +55,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
