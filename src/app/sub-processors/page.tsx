@@ -11,40 +11,40 @@ export const metadata: Metadata = {
 
 const SUB_PROCESSORS = [
   {
-    name: "Vercel Inc.",
+    name: "Vercel, Inc.",
     service: "Marketing site hosting",
-    data: "Public content only",
-    location: "USA / Global",
+    data: "Public marketing traffic; web request logs",
+    location: "Global (USA primary)",
   },
   {
     name: "RackNerd LLC",
-    service: "Application hosting",
-    data: "Encrypted seller data",
-    location: "Los Angeles, USA",
+    service: "Application & database hosting (all seller data)",
+    data: "All seller SP-API data; account data",
+    location: "United States",
   },
   {
-    name: "Cloudflare Inc.",
-    service: "DNS, WAF, CDN",
-    data: "Traffic metadata",
-    location: "Global",
+    name: "Alibaba Cloud (Aliyun)",
+    service: "DNS management",
+    data: "DNS query metadata only (no seller data)",
+    location: "China",
   },
   {
-    name: "GitHub Inc.",
+    name: "GitHub, Inc.",
     service: "Source code repository",
-    data: "Application code",
-    location: "USA",
+    data: "Application source code (no seller data)",
+    location: "United States",
   },
   {
     name: "Sentry (Functional Software, Inc.)",
     service: "Error tracking",
-    data: "Error logs (PII-scrubbed)",
-    location: "USA",
+    data: "Application error logs (no PII)",
+    location: "United States",
   },
   {
-    name: "Google LLC (Workspace)",
-    service: "Internal email",
-    data: "Internal comms only",
-    location: "Global",
+    name: "Tencent Cloud (Exmail)",
+    service: "Business email",
+    data: "Support & operational emails (no seller PII)",
+    location: "China",
   },
 ];
 
@@ -56,7 +56,7 @@ export default function SubProcessors() {
         <article className="prose prose-slate container-narrow py-20 max-w-none lg:py-28">
           <h1 className="text-section-h1 text-slate-900">Sub-processors</h1>
           <p className="text-[13px] text-slate-500">
-            Last updated: May 23, 2026
+            Last updated: June 25, 2026
           </p>
           <p>
             SkuFx uses the following sub-processors to operate the platform. Each is bound by a data

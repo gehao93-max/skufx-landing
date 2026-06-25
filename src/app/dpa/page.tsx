@@ -18,7 +18,7 @@ export default function DPA() {
         <article className="prose prose-slate container-narrow py-20 max-w-none lg:py-28">
           <h1 className="text-section-h1 text-slate-900">Data Processing Agreement</h1>
           <p className="text-[13px] text-slate-500">
-            Version 1.0 &bull; Effective date: May 23, 2026 &bull; Last updated: May 23, 2026
+            Version 1.0 &bull; Effective date: May 23, 2026 &bull; Last updated: June 25, 2026
           </p>
           <p>
             This Data Processing Agreement (&quot;DPA&quot;) is incorporated into and forms part of
@@ -118,21 +118,27 @@ export default function DPA() {
             <tbody>
               <tr>
                 <td>Vercel, Inc.</td>
-                <td>Website &amp; application hosting (Next.js)</td>
-                <td>Web request logs; public marketing traffic</td>
+                <td>Marketing website hosting (Next.js)</td>
+                <td>Public marketing traffic; web request logs</td>
                 <td>Global (USA primary)</td>
               </tr>
               <tr>
                 <td>RackNerd LLC</td>
-                <td>Application backend hosting</td>
+                <td>Application backend &amp; database hosting</td>
                 <td>All seller SP-API data; account data</td>
                 <td>United States</td>
               </tr>
               <tr>
-                <td>Cloudflare, Inc.</td>
-                <td>DNS, CDN, and WAF</td>
-                <td>Traffic metadata (IP, request headers)</td>
-                <td>Global</td>
+                <td>Alibaba Cloud (Aliyun)</td>
+                <td>DNS management</td>
+                <td>DNS query metadata only (no seller data)</td>
+                <td>China</td>
+              </tr>
+              <tr>
+                <td>GitHub, Inc.</td>
+                <td>Source code repository</td>
+                <td>Application source code (no seller data)</td>
+                <td>United States</td>
               </tr>
               <tr>
                 <td>Sentry (Functional Software, Inc.)</td>
@@ -141,10 +147,10 @@ export default function DPA() {
                 <td>United States</td>
               </tr>
               <tr>
-                <td>Google LLC (Workspace)</td>
+                <td>Tencent Cloud (Exmail)</td>
                 <td>Business email</td>
-                <td>Support and operational emails</td>
-                <td>Global</td>
+                <td>Support &amp; operational emails (sellers&apos; own non-PII summaries)</td>
+                <td>China</td>
               </tr>
             </tbody>
           </table>
