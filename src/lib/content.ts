@@ -189,7 +189,7 @@ export const SP_API_ROLES = [
 ];
 
 export const COMPANY = {
-  name: "Liaoyang Puwei Trading Co., Ltd.",
+  name: "辽阳普维商贸有限公司 (Liaoyang Puwei Trading Co., Ltd.)",
   yearsOnAmazon: "6+",
   modules: 10,
   emails: {
