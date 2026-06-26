@@ -92,11 +92,11 @@ export const SUITES: Suite[] = [
       },
       {
         name: "AI-Assisted Listing Publisher",
-        description: "SkuFx generates optimized listing copy based on your keyword targets and competitor analysis. Once you approve the content, SkuFx prepares a ready-to-publish listing draft — no copy-paste, no format errors, no missed fields.",
+        description: "SkuFx generates optimized listing copy based on your keyword targets and competitor analysis. Once you approve the content, SkuFx publishes it directly to your Seller Central listing via SP-API — no copy-paste, no format errors, no missed fields.",
         icon: FileEdit,
         status: "coming",
         comingQuarter: "Q3 2026",
-        spApiRoles: [],
+        spApiRoles: ["Product Listing"],
         mockup: "fba-inventory.png",
       },
     ],
@@ -116,7 +116,7 @@ export const SUITES: Suite[] = [
         icon: Box,
         status: "coming",
         comingQuarter: "Q3 2026",
-        spApiRoles: ["FBA Inventory"],
+        spApiRoles: ["Inventory & Order Tracking"],
         mockup: "fba-inventory.png",
       },
       {
@@ -125,7 +125,7 @@ export const SUITES: Suite[] = [
         icon: ShoppingBag,
         status: "coming",
         comingQuarter: "Q4 2026",
-        spApiRoles: ["Orders", "Reports"],
+        spApiRoles: ["Inventory & Order Tracking", "Selling Partner Insights"],
         mockup: "profit-dashboard.png",
       },
       {
@@ -134,7 +134,7 @@ export const SUITES: Suite[] = [
         icon: BarChart3,
         status: "coming",
         comingQuarter: "Q1 2027",
-        spApiRoles: ["Finances"],
+        spApiRoles: ["Finance & Accounting"],
         mockup: "profit-dashboard.png",
       },
     ],
@@ -182,10 +182,10 @@ export const ROADMAP_PHASES = [
 ];
 
 export const SP_API_ROLES = [
-  { name: "Orders & Inventory", purpose: "Order tracking & sales analytics" },
-  { name: "FBA Inventory", purpose: "Stock levels, days-of-supply, inbound planning" },
-  { name: "Sales Analytics", purpose: "Business performance dashboard" },
-  { name: "Finances", purpose: "P&L calculation & settlement reconciliation" },
+  { name: "Inventory & Order Tracking", purpose: "Orders, FBA inventory levels & days-of-supply" },
+  { name: "Selling Partner Insights", purpose: "Seller account & performance metrics" },
+  { name: "Finance & Accounting", purpose: "P&L, settlements & profit reconciliation" },
+  { name: "Product Listing", purpose: "Publish approved listings & A+ content (with your approval)" },
 ];
 
 export const COMPANY = {
