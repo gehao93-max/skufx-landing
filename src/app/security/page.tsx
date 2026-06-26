@@ -44,7 +44,7 @@ export default function Security() {
           <section className="mt-16 rounded-2xl border border-slate-200 bg-white p-8">
             <h2 className="text-[22px] font-bold text-slate-900">Data retention</h2>
             <p className="mt-3 text-[14px] leading-relaxed text-slate-600">
-              SP-API data (Brand Analytics reports, Pricing, FBA inventory, Orders, Finances) is retained for as long as your active subscription. Upon revocation of SP-API access or account deletion, all SP-API data is permanently deleted within 24 hours.
+              SP-API data (orders, FBA inventory, sales performance, and finances) is retained for as long as your active subscription. Upon revocation of SP-API access or account deletion, all SP-API data is permanently deleted within 24 hours.
             </p>
           </section>
 
