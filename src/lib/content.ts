@@ -41,27 +41,27 @@ export const SUITES: Suite[] = [
     features: [
       {
         name: "Keyword Opportunity Analyzer",
-        description: "Every week, Amazon sellers sit down to manually export ABA reports, paste them into spreadsheets, and guess which keywords are worth targeting. SkuFx automates this entirely. After you connect your Seller Central account via Login with Amazon, our system retrieves your Brand Analytics reports automatically and computes an opportunity score for each search term — factoring in search frequency rank, click-share concentration, and conversion-share dispersion.",
+        description: "Every week, Amazon sellers manually export ABA reports, paste them into spreadsheets, and guess which keywords are worth targeting. SkuFx automates the analysis: upload your Brand Analytics (Search Query Performance) report and SkuFx computes an opportunity score for each search term — factoring in search frequency rank, click-share concentration, and conversion-share dispersion. No Amazon account connection required.",
         icon: Search,
         status: "available",
-        spApiRoles: ["Brand Analytics"],
+        spApiRoles: [],
         mockup: "keyword-analyzer.png",
       },
       {
         name: "New Product Development Pipeline",
-        description: "SkuFx's 6-step new product pipeline walks you from market idea to launch-ready listing. Step 1 defines the target market; Step 2 identifies competitor reference products; Step 3 uses Amazon's Catalog API to pull authoritative product attributes; Steps 4-5 generate formulation and packaging specs with AI; Step 6 outputs a complete listing draft. The whole process that used to take 2 weeks of manual research now takes 2-3 focused hours.",
+        description: "SkuFx's 6-step new product pipeline walks you from market idea to launch-ready listing. Step 1 defines the target market; Step 2 identifies competitor reference products; Step 3 pulls authoritative product attributes from public marketplace data; Steps 4-5 generate formulation and packaging specs with AI; Step 6 outputs a complete listing draft. The whole process that used to take 2 weeks of manual research now takes 2-3 focused hours.",
         icon: Sparkles,
         status: "available",
-        spApiRoles: ["Catalog Items", "Product Listing"],
+        spApiRoles: [],
         mockup: "new-product-pipeline.png",
       },
       {
-        name: "Competitor ASIN Intelligence",
-        description: "Track every variation, attribute, and category placement of competitor ASINs. Detect category drift, missing variants, and pricing patterns before they affect your launch decisions.",
+        name: "Competitor & Product Tracking",
+        description: "Save any ASIN — a competitor's or your own — to a watchlist and SkuFx tracks its price, Best Seller Rank, rating, and Buy Box over time. Spot category drift, missing variants, and pricing patterns from clear trend charts before they affect your launch decisions.",
         icon: Target,
         status: "available",
-        spApiRoles: ["Catalog Items"],
-        mockup: "anti-hijacking.png",
+        spApiRoles: [],
+        mockup: "product-tracking.png",
       },
     ],
   },
@@ -72,31 +72,31 @@ export const SUITES: Suite[] = [
     badge: "Available Now",
     badgeColor: "amber",
     icon: Search,
-    description: "Keyword research, competitor tracking, listing protection. Shared market data. No Amazon authorization required.",
+    description: "Competitor & seller monitoring, listing protection, and ad report analysis. Built on shared market data and your own report uploads — no Amazon authorization required.",
     features: [
       {
-        name: "Real-time Listing Protection",
-        description: "When a hijacker takes your listing's Buy Box, every minute costs revenue and damages your brand. SkuFx subscribes to Amazon's ANY_OFFER_CHANGED notification via SP-API and delivers an alert within 30 seconds of an unauthorized seller appearing on your listing — including the hijacker's storefront link, price, and Buy Box status. One click starts your IP enforcement workflow.",
+        name: "Seller & Listing Monitoring",
+        description: "Subscribe to any competitor seller and SkuFx watches their catalog — new and delisted ASINs, ratings, and price ranges — while guarding your own listings against hijackers. When an unauthorized seller appears on your Buy Box, you get an alert with their storefront link, price, and Buy Box status so you can start enforcement in one click.",
         icon: Shield,
         status: "available",
-        spApiRoles: ["Notifications"],
-        mockup: "anti-hijacking.png",
-      },
-      {
-        name: "Price & BSR Monitor",
-        description: "Track price and Best Seller Rank for any ASIN — your own or competitors' — with 4-hour refresh intervals. Set custom thresholds: get alerted when a competitor drops price by more than 10%, or when your own BSR drops outside a target range.",
-        icon: TrendingUp,
-        status: "available",
-        spApiRoles: ["Product Pricing"],
+        spApiRoles: [],
         mockup: "seller-monitoring.png",
       },
       {
+        name: "Ad Report Analysis",
+        description: "Forward your Sponsored Products reports to SkuFx by email and it parses them automatically — tracking spend, clicks, CTR, and ACOS across daily, weekly, and monthly periods, with AI-generated diagnostics and trend flags. No Amazon account connection required.",
+        icon: TrendingUp,
+        status: "available",
+        spApiRoles: [],
+        mockup: "ad-analysis.png",
+      },
+      {
         name: "AI-Assisted Listing Publisher",
-        description: "SkuFx generates optimized listing copy based on your keyword targets and competitor analysis. Once you approve the content, one click publishes it directly to your Seller Central listing via SP-API — no copy-paste, no format errors, no missed fields.",
+        description: "SkuFx generates optimized listing copy based on your keyword targets and competitor analysis. Once you approve the content, SkuFx prepares a ready-to-publish listing draft — no copy-paste, no format errors, no missed fields.",
         icon: FileEdit,
         status: "coming",
         comingQuarter: "Q3 2026",
-        spApiRoles: ["Listings Items"],
+        spApiRoles: [],
         mockup: "fba-inventory.png",
       },
     ],
@@ -108,7 +108,7 @@ export const SUITES: Suite[] = [
     badge: "Connecting via SP-API",
     badgeColor: "slate",
     icon: Box,
-    description: "Sales analytics, FBA inventory, orders, profit dashboard. Your private store data, synced directly from Amazon Seller Central via SP-API.",
+    description: "Performance dashboard, FBA inventory, orders, and profit. Available today from your uploaded settlement & ad reports — real-time sync via Amazon SP-API coming soon.",
     features: [
       {
         name: "FBA Inventory Center",
@@ -116,7 +116,7 @@ export const SUITES: Suite[] = [
         icon: Box,
         status: "coming",
         comingQuarter: "Q3 2026",
-        spApiRoles: ["FBA Inventory", "FBA Inbound Eligibility"],
+        spApiRoles: ["FBA Inventory"],
         mockup: "fba-inventory.png",
       },
       {
@@ -182,20 +182,16 @@ export const ROADMAP_PHASES = [
 ];
 
 export const SP_API_ROLES = [
-  { name: "Catalog & Listings", purpose: "Product info, listing publishing, A+ content" },
-  { name: "Pricing", purpose: "Competitive price monitoring & auto-pricing" },
-  { name: "FBA Inventory", purpose: "Stock levels, days-of-supply, inbound planning" },
   { name: "Orders & Inventory", purpose: "Order tracking & sales analytics" },
+  { name: "FBA Inventory", purpose: "Stock levels, days-of-supply, inbound planning" },
   { name: "Sales Analytics", purpose: "Business performance dashboard" },
   { name: "Finances", purpose: "P&L calculation & settlement reconciliation" },
-  { name: "Brand Analytics", purpose: "Keyword research & market insights" },
 ];
 
 export const COMPANY = {
   name: "Liaoyang Puwei Trading Co., Ltd.",
   yearsOnAmazon: "6+",
   modules: 10,
-  abaKeywords: "350k+",
   emails: {
     support: "support@skufx.com",
     privacy: "privacy@skufx.com",

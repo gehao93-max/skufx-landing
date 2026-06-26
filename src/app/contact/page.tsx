@@ -1,6 +1,5 @@
 // src/app/contact/page.tsx
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Mail, Calendar } from "lucide-react";
 import { TopNav } from "@/components/top-nav";
 import { Footer } from "@/components/footer";
@@ -9,7 +8,7 @@ import { COMPANY } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Reach SkuFx — support, privacy, security inquiries. Or book a 30-minute demo.",
+  description: "Reach SkuFx — support, sales, privacy, and security inquiries.",
 };
 
 const EMAILS = [
@@ -33,16 +32,17 @@ export default function Contact() {
           <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">
             <div className="rounded-2xl border border-amber-300 bg-amber-50 p-6">
               <Calendar className="h-6 w-6 text-amber-700" />
-              <h3 className="mt-4 text-card-h3 text-slate-900">Book a 30-min demo</h3>
+              <h3 className="mt-4 text-card-h3 text-slate-900">Book a walkthrough</h3>
               <p className="mt-2 text-[14px] leading-relaxed text-slate-700">
-                Walk through the platform with one of our team members. Calendly link below.
+                Want a guided tour of the platform? Email us and we&apos;ll schedule a 30-minute demo
+                that fits your calendar.
               </p>
-              <Link
-                href={process.env.NEXT_PUBLIC_CALENDLY_URL || "#"}
+              <a
+                href={`mailto:${COMPANY.emails.support}?subject=SkuFx demo request`}
                 className="mt-4 inline-flex h-10 items-center rounded-lg bg-slate-900 px-5 text-[14px] font-semibold text-white hover:bg-slate-800"
               >
-                Open Calendly →
-              </Link>
+                Email us to book →
+              </a>
             </div>
 
             <div className="rounded-2xl border border-slate-200 bg-white p-6">

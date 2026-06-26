@@ -29,6 +29,11 @@ export function FeatureShowcase({ feature, align = "image-left", mockupSize = { 
           alt={feature.name}
           className="w-full rounded-lg"
         />
+        {feature.status === "coming" && (
+          <span className="absolute left-4 top-4 rounded-md bg-slate-900/85 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
+            Preview · Coming {feature.comingQuarter}
+          </span>
+        )}
       </div>
     </div>
   );
@@ -47,14 +52,20 @@ export function FeatureShowcase({ feature, align = "image-left", mockupSize = { 
       </div>
       <p className="mt-4 text-[15px] leading-[1.7] text-slate-600">{feature.description}</p>
       <div className="mt-5 flex flex-wrap gap-1.5">
-        {feature.spApiRoles.map((role) => (
-          <span
-            key={role}
-            className="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-mono font-semibold text-slate-700"
-          >
-            SP-API · {role}
+        {feature.spApiRoles.length > 0 ? (
+          feature.spApiRoles.map((role) => (
+            <span
+              key={role}
+              className="rounded-md bg-slate-100 px-2.5 py-1 text-[11px] font-mono font-semibold text-slate-700"
+            >
+              SP-API · {role}
+            </span>
+          ))
+        ) : feature.status === "available" ? (
+          <span className="rounded-md bg-emerald-50 px-2.5 py-1 text-[11px] font-mono font-semibold text-emerald-700">
+            No Amazon account required
           </span>
-        ))}
+        ) : null}
       </div>
     </div>
   );

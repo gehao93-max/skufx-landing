@@ -43,9 +43,9 @@ export function EarlyAccessForm() {
         <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm lg:p-12">
           <div className="text-center">
             <SectionEyebrow label="Early Access" />
-            <h2 className="mt-3 text-section-h1 text-slate-900">Get on the early access list.</h2>
+            <h2 className="mt-3 text-section-h1 text-slate-900">Request early access.</h2>
             <p className="mt-3 text-body-lg text-slate-600">
-              We onboard brands one at a time. Tell us about yours — we&apos;ll reach out within 24 hours.
+              We&apos;re onboarding Amazon brands in batches. Tell us about yours and we&apos;ll be in touch — typically within 24 hours.
             </p>
           </div>
 
@@ -88,7 +88,8 @@ export function EarlyAccessForm() {
 
             <div className="md:col-span-2 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
               <p className="text-[12px] text-slate-500">
-                Or <a href={process.env.NEXT_PUBLIC_CALENDLY_URL} className="font-semibold text-slate-900 underline hover:text-amber-700">book a 30-min demo</a> directly.
+                Prefer email? Write to{" "}
+                <a href="mailto:support@skufx.com" className="font-semibold text-slate-900 underline hover:text-amber-700">support@skufx.com</a>.
               </p>
               <Button
                 type="submit"
@@ -96,7 +97,7 @@ export function EarlyAccessForm() {
                 className="h-11 bg-slate-900 px-7 text-[15px] font-semibold text-white hover:bg-slate-800 disabled:opacity-60"
               >
                 {submitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                Request Early Access
+                Request early access
               </Button>
             </div>
           </form>

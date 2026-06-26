@@ -21,11 +21,11 @@ const JSON_LD = {
       "operatingSystem": "Web",
       "description":
         "The Amazon Operator's Platform — keyword research, brand monitoring, inventory, orders, and finance for Amazon brand owners.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "offers": { "@type": "Offer", "url": "https://skufx.com/pricing", "availability": "https://schema.org/InStock" },
       "featureList": [
-        "Brand Analytics keyword opportunity analyzer",
+        "Keyword opportunity analyzer",
         "AI-powered new product pipeline",
-        "Real-time listing protection (ANY_OFFER_CHANGED)",
+        "Real-time listing & hijacker protection",
         "Price & BSR monitoring",
         "FBA inventory tracking",
         "Order management",

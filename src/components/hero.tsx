@@ -53,8 +53,8 @@ export function Hero() {
         {/* eyebrow pill */}
         <div className="flex justify-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white py-1 pl-1 pr-3.5 text-[12px] font-semibold text-slate-600 shadow-sm">
-            <span className="animate-pulse-soft rounded-full bg-amber-500 px-2 py-0.5 text-[11px] font-extrabold text-slate-900">NEW</span>
-            SP-API Integration Coming
+            <span className="animate-pulse-soft rounded-full bg-amber-500 px-2 py-0.5 text-[11px] font-extrabold text-slate-900">EARLY ACCESS</span>
+            Built by 6-year Amazon sellers
           </div>
         </div>
 
@@ -74,7 +74,7 @@ export function Hero() {
             href="#early-access-form"
             className="inline-flex h-12 items-center justify-center rounded-lg bg-slate-900 px-7 text-[15px] font-semibold text-white shadow-sm transition-all hover:bg-slate-800 hover:shadow-lg hover:shadow-slate-900/20 hover:-translate-y-0.5"
           >
-            Request Early Access
+            Request early access
           </Link>
           <Link
             href="/features"
@@ -89,7 +89,7 @@ export function Hero() {
         <div className="mx-auto mt-12 grid max-w-3xl grid-cols-1 gap-2 sm:grid-cols-3">
           <BentoCell num={COMPANY.modules.toString()} label="Integrated modules" />
           <BentoCell num={COMPANY.yearsOnAmazon} label="Years on Amazon" accent />
-          <BentoCell num={COMPANY.abaKeywords} label="ABA keywords indexed" />
+          <BentoCell num="2–3 hrs" label="From idea to listing draft" />
         </div>
 
         {/* hero mockup */}

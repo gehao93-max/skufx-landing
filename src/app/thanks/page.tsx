@@ -26,10 +26,10 @@ export default function Thanks() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
-                href={process.env.NEXT_PUBLIC_CALENDLY_URL || "/"}
+                href="/features"
                 className="inline-flex h-11 items-center justify-center rounded-lg bg-slate-900 px-6 text-[15px] font-semibold text-white hover:bg-slate-800"
               >
-                Book a demo now →
+                Explore the platform →
               </Link>
               <Link
                 href="/"

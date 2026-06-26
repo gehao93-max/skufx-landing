@@ -63,13 +63,13 @@ export default function Features() {
               Ready to operate at scale?
             </h2>
             <p className="mt-3 text-body-lg text-slate-300">
-              Join the early access list. We onboard one brand at a time.
+              We&apos;re onboarding Amazon brands in batches — tell us about yours.
             </p>
             <Link
               href="/#early-access-form"
               className="mt-8 inline-flex h-12 items-center gap-2 rounded-lg bg-amber-500 px-7 text-[15px] font-semibold text-slate-900 hover:bg-amber-600"
             >
-              Request Early Access
+              Request early access
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

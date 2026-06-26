@@ -12,6 +12,7 @@ export function TopNav() {
 
         <nav className="hidden items-center gap-7 text-[14px] font-medium text-slate-600 md:flex">
           <Link href="/features" className="hover:text-slate-900 transition-colors">Features</Link>
+          <Link href="/pricing" className="hover:text-slate-900 transition-colors">Pricing</Link>
           <Link href="/about" className="hover:text-slate-900 transition-colors">About</Link>
           <Link href="/security" className="hover:text-slate-900 transition-colors">Security</Link>
           <Link href="/contact" className="hover:text-slate-900 transition-colors">Contact</Link>
@@ -28,7 +29,7 @@ export function TopNav() {
             href="/#request-access"
             className="rounded-lg bg-slate-900 px-4 py-2 text-[14px] font-semibold text-white hover:bg-slate-800 transition-colors"
           >
-            Request Access
+            Request access
           </Link>
         </div>
       </div>
